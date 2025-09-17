@@ -16,14 +16,19 @@ public class AppleTree : MonoBehaviour
 
     public float appleDropDelay = 1f; // Seconds between Apple instantiations
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Start() // Start is called once before the first execution of Update after the MonoBehaviour is created
     {
         // Start dropping apples
+        Invoke("DropApple", 2f);
     }
 
-    // Update is called once per frame
-    void Update()
+    void DropApple() {
+        GameObject apple = Instantiate<GameObject>(applePrefab);
+        apple.transform.position = transform.position;
+        Invoke("DropApple", appleDropDelay);
+    }
+
+    void Update() // Update is called once per frame
     {
         // Basic Movement
         Vector3 pos = transform.position;

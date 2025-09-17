@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 1216531783}
   - component: {fileID: 1216531782}
   - component: {fileID: 1216531781}
+  - component: {fileID: 1216531784}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -211,6 +212,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1216531784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216531780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ae77028c9f9284e820a0d0819358ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basketPrefab: {fileID: 3490591575682583825, guid: d1f068c77056ba94c9f33d6e31ade577, type: 3}
+  numBaskets: 3
+  basketBottomY: -14
+  basketSpacingY: 2
 --- !u!1 &1707315393
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,8 +338,24 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 652955860113629954, guid: 90e4955ac53e99847913f174a40da67d, type: 3}
+      propertyPath: applePrefab
+      value: 
+      objectReference: {fileID: 6065431041405956331, guid: d815046996a500c4e82c593705831ca5, type: 3}
+    - target: {fileID: 652955860113629954, guid: 90e4955ac53e99847913f174a40da67d, type: 3}
       propertyPath: changeDirChance
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099100777012354622, guid: 90e4955ac53e99847913f174a40da67d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099100777012354622, guid: 90e4955ac53e99847913f174a40da67d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099100777012354622, guid: 90e4955ac53e99847913f174a40da67d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2099100777012354622, guid: 90e4955ac53e99847913f174a40da67d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -364,9 +397,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2819778098672310089, guid: 90e4955ac53e99847913f174a40da67d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5320398000946403314, guid: 90e4955ac53e99847913f174a40da67d, type: 3}
       propertyPath: m_Name
       value: AppleTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 5320398000946403314, guid: 90e4955ac53e99847913f174a40da67d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416799969339321134, guid: 90e4955ac53e99847913f174a40da67d, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632641681424287247, guid: 90e4955ac53e99847913f174a40da67d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
