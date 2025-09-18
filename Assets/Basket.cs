@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Basket : MonoBehaviour
 {
+    public ScoreCounter scoreCounter;
+
     void Start()
     {
-        
+        GameObject scoreGO = GameObject.Find("ScoreCounter"); // finds GameObject named "ScoreCounter"
+        scoreCounter = scoreGO.GetComponent<ScoreCounter>(); // get ScoreCounter Script component of scoreGO
     }
 
     void Update()
@@ -26,6 +29,7 @@ public class Basket : MonoBehaviour
         GameObject collidedWith = coll.gameObject;
         if (collidedWith.CompareTag("Apple")) {
             Destroy(collidedWith);
+            scoreCounter.score += 100; // Increase score by 100 per apple collided with
         }
     }
 }
